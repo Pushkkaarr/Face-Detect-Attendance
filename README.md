@@ -1,5 +1,5 @@
 # Face-Detect-Attendance
-Python based face detection attendance system.
+Python based face detection attendance system. (GUI by Tkinter)
 
 To install required libraries , in terminal do
 **pip install requirement.txt**  ( It consists of all required libraries)
