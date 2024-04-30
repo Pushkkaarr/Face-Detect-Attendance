@@ -2,7 +2,7 @@
 Python based face detection attendance system.
 
 To install required libraries , in terminal do
-pip install requirement.txt  ( It consists of all required libraries)
+**pip install requirement.txt**  ( It consists of all required libraries)
 
 After that make a Attendance name folder - in that add all folders as per your subject names.
 
