@@ -13,10 +13,10 @@ def subjectchoose(text_to_speech):
             t='Please enter the subject name.'
             text_to_speech(t)
         os.chdir(
-            f"E:\\Softwares\\VScode\\GitHub\\3 option\\Attendance-Management-system-using-face-recognition-master\\Attendance\\{Subject}"
+            f"E:\\Softwares\\VScode\\GitHub\\Attendance-Management-system-using-face-recognition-master\\Attendance\\{Subject}"
         )
         filenames = glob(
-            f"E:\\Softwares\\VScode\\GitHub\\3 option\\Attendance-Management-system-using-face-recognition-master\\Attendance\\{Subject}\\{Subject}*.csv"
+            f"E:\\Softwares\\VScode\\GitHub\\Attendance-Management-system-using-face-recognition-master\\Attendance\\{Subject}\\{Subject}*.csv"
         )
         df = [pd.read_csv(f) for f in filenames]
         newdf = df[0]
@@ -32,7 +32,7 @@ def subjectchoose(text_to_speech):
         root = tkinter.Tk()
         root.title("Attendance of "+Subject)
         root.configure(background="black")
-        cs = f"E:\\Softwares\\VScode\\GitHub\\3 option\\Attendance-Management-system-using-face-recognition-master\\Attendance\\{Subject}\\attendance.csv"
+        cs = f"E:\\Softwares\\VScode\\GitHub\\Attendance-Management-system-using-face-recognition-master\\Attendance\\{Subject}\\attendance.csv"
         with open(cs) as file:
             reader = csv.reader(file)
             r = 0
@@ -83,7 +83,7 @@ def subjectchoose(text_to_speech):
             text_to_speech(t)
         else:
             os.startfile(
-            f"E:\\Softwares\\VScode\\GitHub\\3 option\\Attendance-Management-system-using-face-recognition-master\\Attendance\\{sub}"
+            f"E:\\Softwares\\VScode\\GitHub\\Attendance-Management-system-using-face-recognition-master\\Attendance\\{sub}"
             )
 
 
