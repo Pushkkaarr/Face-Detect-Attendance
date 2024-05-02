@@ -11,15 +11,19 @@ import time
 import tkinter.ttk as tkk
 import tkinter.font as font
 
-haarcasecade_path = "E:\\Softwares\\VScode\\GitHub\\3 option\\Attendance-Management-system-using-face-recognition-master\\haarcascade_frontalface_default.xml"
+haarcasecade_path = "E:\\Softwares\\VScode\\GitHub\\Attendance-Management-system-using-face-recognition-master\\haarcascade_frontalface_default.xml"
+#Trained Models Path
 trainimagelabel_path = (
-    "E:\\Softwares\\VScode\\GitHub\\3 option\\Attendance-Management-system-using-face-recognition-master\\TrainingImageLabel\\Trainner.yml"
+    "E:\\Softwares\\VScode\\GitHub\\Attendance-Management-system-using-face-recognition-master\\TrainingImageLabel\\Trainner.yml"
 )
-trainimage_path = "E:\\Softwares\\VScode\\GitHub\\3 option\\Attendance-Management-system-using-face-recognition-master\\TrainingImage"
+# trainimagelabel_path1=("E:\\Trainner_Adi.yml")
+# trainimagelabel_path2=("E:\\Trainner_aryan.yml")
+
+trainimage_path = "E:\\Softwares\\VScode\\GitHub\\Attendance-Management-system-using-face-recognition-master\\TrainingImage"
 studentdetail_path = (
-    "E:\\Softwares\\VScode\\GitHub\\3 option\\Attendance-Management-system-using-face-recognition-master\\StudentDetails\\studentdetails.csv"
+    "E:\\Softwares\\VScode\\GitHub\\\Attendance-Management-system-using-face-recognition-master\\StudentDetails\\studentdetails.csv"
 )
-attendance_path = "E:\\Softwares\\VScode\\GitHub\\3 option\\Attendance-Management-system-using-face-recognition-master\\Attendance"
+attendance_path = "E:\\Softwares\\VScode\\GitHub\\Attendance-Management-system-using-face-recognition-master\\Attendance"
 # for choose subject and fill attendance
 def subjectChoose(text_to_speech):
     def FillAttendance():
@@ -36,6 +40,8 @@ def subjectChoose(text_to_speech):
                 recognizer = cv2.face.LBPHFaceRecognizer_create()
                 try:
                     recognizer.read(trainimagelabel_path)
+                    #recognizer.read(trainimagelabel_path1)
+                    #recognizer.read(trainimagelabel_path2)
                 except:
                     e = "Model not found,please train model"
                     Notifica.configure(
@@ -148,32 +154,6 @@ def subjectChoose(text_to_speech):
                 cam.release()
                 cv2.destroyAllWindows()
 
-                import csv
-                import tkinter
-
-                with open(cs, newline="") as file:
-                    reader = csv.reader(file)
-                    r = 0
-
-                    for col in reader:
-                        c = 0
-                        for row in col:
-
-                            label = tkinter.Label(
-                                root,
-                                width=10,
-                                height=1,
-                                fg="yellow",
-                                font=("times", 15, " bold "),
-                                bg="black",
-                                text=row,
-                                relief=tkinter.RIDGE,
-                            )
-                            label.grid(row=r, column=c)
-                            c += 1
-                        r += 1
-                root.mainloop()
-                print(attendance)
             except:
                 f = "No Face found for attendance"
                 text_to_speech(f)
@@ -206,19 +186,6 @@ def subjectChoose(text_to_speech):
         height=2,
         font=("times", 15, "bold"),
     )
-
-    def Attf():
-        sub = tx.get()
-        if sub == "":
-            t = "Please enter the subject name!!!"
-            text_to_speech(t)
-        else:
-            os.startfile(
-                f"E:\\Softwares\\VScode\\GitHub\\3 option\\Attendance-Management-system-using-face-recognition-master\\Attendance\\{sub}"
-            )
-
-
-
     sub = tk.Label(
         subject,
         text="Enter Subject",
