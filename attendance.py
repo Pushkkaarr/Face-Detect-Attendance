@@ -25,15 +25,16 @@ def text_to_speech(user_text):
     engine.runAndWait()
 
 
-haarcasecade_path = "E:\\Softwares\\VScode\\GitHub\\3 option\\Attendance-Management-system-using-face-recognition-master\\haarcascade_frontalface_default.xml"
+haarcasecade_path = "E:\\Softwares\\VScode\\GitHub\\Attendance-Management-system-using-face-recognition-master\\haarcascade_frontalface_default.xml"
 trainimagelabel_path = (
-    "E:\\Softwares\\VScode\\GitHub\\3 option\\Attendance-Management-system-using-face-recognition-master\\TrainingImageLabel\\Trainner.yml"
+    "E:\\Softwares\\VScode\\GitHub\\Attendance-Management-system-using-face-recognition-master\\TrainingImageLabel\\Trainner.yml"
 )
-trainimage_path = "E:\\Softwares\\VScode\\GitHub\\3 option\\Attendance-Management-system-using-face-recognition-master\\TrainingImage"
+
+trainimage_path = "E:\\Softwares\\VScode\\GitHub\\Attendance-Management-system-using-face-recognition-master\\TrainingImage"
 studentdetail_path = (
-    "E:\\Softwares\\VScode\\GitHub\\3 option\\Attendance-Management-system-using-face-recognition-master\\StudentDetails\\studentdetails.csv"
+    "E:\\Softwares\\VScode\\GitHub\\Attendance-Management-system-using-face-recognition-master\\StudentDetails\\studentdetails.csv"
 )
-attendance_path = "E:\\Softwares\\VScode\\GitHub\\3 option\\Attendance-Management-system-using-face-recognition-master\\Attendance"
+attendance_path = "E:\\Softwares\\VScode\\GitHub\\Attendance-Management-system-using-face-recognition-master\\Attendance"
 
 
 window = Tk()
